@@ -15,6 +15,19 @@ The picture above will shows how the UI looks when the application is running an
 - A separate page to add a new post and
 - A separate page to view each post through a unique link.
 
+### User flow
+- step1:
+  - Go to home page of app, if the user is authenticated it will go to users home page
+  - If user is not authenticated it will redirects to signin page, if user doesnt have account he can create it by providing necessary details including role(user/admin) by sign up.
+- step2:
+  - User can post an blog from home page and he had full control of the post related to editing/deleting the post and like/unlike for his post.
+  - If there are many post he can see all the posts by going through pagination.
+  - If he want to view blog in different page he can copy blog link/by clicking on share icon on post he can view the post.
+  - If he wants to delete/edit blog he can click on 3dots on card and can perfrom actions.
+- step3:
+  - If user wants to change firstname/lastname he can change in users setting page.
+  - If the user role is admin the he has all the above permissions of all the posts (delete/edit) and enable/disabling user for the app.
+  
 ### Other UI pages
 ##### SignUp Page
 ![](https://i.imgur.com/8YECDTu.png)
