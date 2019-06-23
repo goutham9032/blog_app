@@ -214,6 +214,6 @@ def home(request):
     This function will opens users home page
     '''
     blogs_list = BlogPost.objects.all().order_by('-updated_at')
-    blogs = get_paginated_blogs(blogs_list, request) 
+    blogs = get_paginated_blogs(blogs_list, request, 10) 
     return render(request, 'home.html', {'feeds':blogs})
 
