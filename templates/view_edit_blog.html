@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    {% include 'navbar.html'%}
+	<div class="container">
+         {% if '/edit' in request.path %}
+                <div class="row justify-content-center post_card_row" blog_id="{{feed.slug}}">
+                    <div class="col-6">
+                       <div class="post_card_div row">
+                         <div class="col-8">
+                             <div class="usr_img">
+                                 <img src="/static/images/{{user.useraddinfo.avatar}}">
+                             </div>
+                             <div class="usr_info">
+                                 <span>{{feed.owner.first_name}}</span>
+                                 <span>{{feed.owner.email}}</span>
+                             </div>
+                         </div>
+                         <div class="col-4">
+                              <button type="button" class="btn btn-success" id="update_blog">Update</button>
+                         </div>
+                      </div>
+                      <div class="form-group blog_edit_div">
+                           <textarea class="form-control" rows="5" id="blog_edit_ip" value="testing here">{{feed.description}}</textarea>
+                      </div>
+                   </div>
+               </div>
+         {% else %}
+             {% for feed in feeds %}
+                 {% include 'feed_card.html' %}
+             {% endfor %}
+         {% endif %}
+       
+	</div>
+{% endblock %}

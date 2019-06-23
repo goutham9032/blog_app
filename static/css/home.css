@@ -1,0 +1,270 @@
+
+.navbar.bg-light{
+  background-color: #333!important;
+}
+.navbar a{
+   color:white!important;
+}
+.dropdown-menu a{
+   color:black!important;
+}
+.navbar .fa-user-circle{
+   font-size:1.3rem;
+}
+.navbar .dropdown-menu{
+   margin-left:-6.5rem;
+   margin-top:-0.3rem;
+}
+
+.inline{
+    display: inline-flex;
+}
+.no-border{
+   border:none;
+}
+.post_card_div{
+  background-color:#eae8e8!important;
+  padding:0.3rem;
+  display:flex;
+}
+.usr_img img{
+    border-radius: 2rem;
+    height: 2.7rem;
+    width: 2.7rem;
+}
+.comment_section img,
+.comment-ip-div img{
+    height:2.3rem;
+    width:2.3rem;
+    border-radius:2rem;
+}
+.comment{
+    margin: 0.7rem;
+    background-color: #e5e8ec;
+    border-radius: 1rem;
+}
+.comment span{
+   font-size: 0.9rem;
+   color: #5a5959;
+}
+.cmnt-user{
+  font-size: 0.9rem;
+}
+#blog_edit_ip{
+  width:100%!important;
+}
+.blog_edit_div{
+  margin:0;
+}
+#update_blog{
+  margin-left:4rem;
+}
+.comment-ip-div {
+   padding:0.6rem;
+}
+.usr_info{
+  display: inline-grid;
+  margin-left:0.5rem;
+}
+.post_card_row .col-6{
+    margin-top: 3rem;
+    padding: 0rem;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0.125);
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 2px 15px;
+}
+.usr_info span:nth-child(1){
+  font-weight: 600;
+}
+.usr_info span:nth-child(2){
+    margin-top: -0.5rem;
+    font-size: 0.8rem;
+    font-color: #616060;
+    color: #6f6d6d;
+}
+.post_btn{
+    margin-top:0.5rem;
+}
+.post_btn .fa-picture-o{
+    color: darkgreen;
+    padding-right: 0.3rem;
+}
+.post_btn .fa-telegram{
+    color: coral;
+    padding-right: 0.3rem;
+}
+.post_btn button{
+    border-radius: 0.5rem;
+    border: none;
+    border-color: 1px solid red;
+    background: white;
+    outline:none;
+}
+
+#post_desc{
+   border:none;
+}
+.post_btn button:nth-child(2){
+   margin-left:1rem;
+}
+#preview_file{
+   width: 16rem;
+    height: 16rem;
+    padding: 1rem;
+}
+.post_card_textarea .fa{
+    font-size: 1.3rem;
+    position: absolute;
+    padding-left: -1rem;
+    display:none;
+    top: 3%;
+    left: 41%;
+}
+
+input:focus,
+button:focus,
+textarea:focus,
+select:focus{
+    box-shadow: none !important;
+}
+.dropdown{
+  padding:0.3rem;
+}
+.feed_card_div .dropdown-menu{
+   padding:0;
+}
+.no_pointer{
+  cursor:not-allowed;
+}
+.pointer {
+    cursor: pointer;
+}
+.no_display{
+   display:none;
+}
+input[type="file"]{
+    color: transparent;
+}
+#post_feed{
+   margin-left:0.5rem;
+}
+.feed_card_div{
+    background-color: #f1f1f1!important;
+}
+.feed_info_div{
+    display: inline-flex;
+}
+.feed_content img{
+   max-width: 100%;
+}
+.feed_content p{
+   margin: 0.5rem 0 1rem 1rem;
+   font-size: 0.95rem;
+   color: #1d2129;
+}
+.col-6 hr{
+   margin:0rem!important;
+}
+.feed_info_div .fa{
+    font-size: 1.5rem;
+    opacity: 0.7;
+    padding: 0.6rem;
+}
+.like_comment_div{
+    margin: 0.7rem 0 1rem 1rem;
+    font-size: 0.85rem;
+    color: #6f6d6d;
+}
+.fa-heart{
+   color:red;
+}
+.feed_card_div .dropdown{
+    left: 47%;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #868686;
+}
+.dropdown-toggle::after {
+    display:none;
+}
+#letters_count{
+   font-size: 0.8rem;
+   margin-left: -2.3rem;
+   color: #6f6d6d;
+}
+.post_card_row .form-control {
+   width:98%!important;
+}
+.post_card_textarea .col-1{
+   margin-top:2rem;
+}
+.post_card_div.row{
+  margin:0;
+}
+.post_card_div .col-8{
+  display: inline-flex;
+  padding-left:0;
+}
+.post_card_div .col-4{
+  padding-left: 1.95rem;
+  padding-right: 0;
+}
+.no_posts_row .col-6{
+   margin-top:2rem;
+   text-align:center;
+}
+.no_posts_row p{
+    background-color: #eae8e8;
+    border-radius: 1rem;
+    padding: 0.1rem;
+    color: #929292;
+}
+.login .col-md-4{
+   padding: 1rem;
+    border: 1px solid #d4d4d4;
+    border-radius: 1rem;
+}
+.login .row{
+  transform: translatey(25%);
+}
+.signup .row{
+  transform: translatey(20%)!important;
+}
+.profile_dropdown{
+    padding:0!important;
+}
+.login .alert{
+    font-size:0.8rem;
+    padding:0.4rem;
+}
+.f_right{
+    float:right;
+}
+
+#comment-ip{
+   width:27rem!important;
+   border-radius:1rem;
+   margin: 0 0.5rem 0 0.5rem;
+}
+#add-comment{
+  border-radius: 2rem;
+  color: #75719c;
+  border-color:darkgrey;
+}
+.pagination li{
+  padding:0.75rem;
+  border:1px solid #f3f0f0; 
+  margin-top:3rem;
+}
+.pagination li.active{
+  background: #1db31d;
+  color: white;
+}
+.settings h4{
+  color:grey;
+  margin-top:3rem;
+}
+.nav-item.active{
+   display: contents;
+}

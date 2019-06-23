@@ -1,0 +1,62 @@
+<div class="row justify-content-center post_card_row feed_card" id={{feed.blog.slug}}>
+    <div class="col-6">
+       <div class="post_card_div feed_card_div">
+         <div class="usr_img">
+             <img src="/static/images/{{feed.blog.owner.useraddinfo.avatar}}">
+         </div>
+         <div class="usr_info">
+             <span>
+                  <a href="/users/{{feed.blog.owner.username}}">{{feed.blog.owner.first_name}}</a>
+             </span>
+             {% if feed.updated %}
+                <span>Updated on {{feed.blog.updated_at }} </span>
+             {% else %}
+                <span>Published on {{feed.blog.created_at}} </span>
+             {% endif %}
+         </div>
+         <div class="dropdown pointer">
+              <i class="fa fa-ellipsis-v dropdown-toggle" data-toggle="dropdown"  aria-hidden="true"></i>
+              <div class="dropdown-menu dropdown-menu-right">
+                {% if request.user == feed.blog.owner or request.user.is_superuser %}
+                    <a class="dropdown-item disabled" href="/blog/{{feed.blog.slug}}/edit">Edit</a>
+                    <a class="dropdown-item pointer delete_feed">Delete</a>
+                {% endif %}
+                <a class="dropdown-item pointer copy_link">Copy post Link</a>
+              </div>
+         </div>
+      </div>
+      <div class="feed_content">
+          <p>{{feed.blog.description}}</p>
+          <img src="{{feed.file_location}}">
+      </div>
+      <hr>
+      <div class="feed_info_div">
+          <i class="fa {% if feed.liked %}fa-heart{% else %}fa-heart-o{% endif %} like_heart pointer" aria-hidden="true"></i>
+          <i class="fa fa-comment-o no_pointer" id="comment_icon" aria-hidden="true"></i>
+          <a href="/blog/{{feed.blog.slug}}/view"><i class="fa fa-share pointer" id="share_icon" aria-hidden="true"></i></a>
+          <div class="like_comment_div">
+              <span id="likes_count">{{feed.blog.likes_count}}</span> likes
+              <span id="cmnts_count">{{feed.comments|length}}</span> comments
+          </div>
+      </div>
+      <hr>
+      <div class="comment_section">
+          {% for cmnt in feed.comments%}
+			  <div class="comment" cmnt_id="{{cmnt.slug}}">
+				  <img src="/static/images/{{cmnt.comment_creator.useraddinfo.avatar}}">
+				  <a class="cmnt-user" href="/users/{{cmnt.comment_creator.username}}">
+                     {{cmnt.comment_creator.first_name}}
+                  </a>
+                  <span> {{cmnt.comment}}</span>
+			  </div>
+          {% endfor %}
+      </div>
+      <div class="comment-ip-div inline">
+		   <img src="/static/images/{{user.useraddinfo.avatar}}">
+		   <input type="text" class="form-control" id="comment-ip">
+		   <button type="button" id="add-comment" class="btn no_pointer" disabled>
+				   Reply
+		   </button>
+       </div>
+    </div>
+</div>

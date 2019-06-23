@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% include 'navbar.html'%}
+	<div class="container">
+        {% if '/users' not in request.path %}
+           {% include 'post_blog.html'%}
+        {% endif %}
+        {% if feeds %}
+		   {% for feed in feeds %}
+			   {% include 'feed_card.html' %}
+		   {% endfor %}
+           {% include 'pagination.html' %}
+        {% else %}
+           <div class="row justify-content-center no_posts_row">
+                <div class="col-6">
+                    <p>Sorry ! No posts available :(</p>
+                </div>
+           </div>
+        {% endif %}
+	</div>
+{% endblock %}

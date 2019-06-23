@@ -1,0 +1,26 @@
+
+<div class="row justify-content-center">
+    <div class="col-4">
+        {% if feeds.has_other_pages %}
+          <ul class="pagination">
+            {% if feed.has_previous %}
+              <li><a href="?page={{ feeds.previous_page_number }}">&laquo;</a></li>
+            {% else %}
+              <li class="disabled"><span>&laquo;</span></li>
+            {% endif %}
+            {% for i in feeds.paginator.page_range %}
+              {% if feeds.number == i %}
+                <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+              {% else %}
+                <li><a href="?page={{ i }}">{{ i }}</a></li>
+              {% endif %}
+            {% endfor %}
+            {% if feeds.has_next %}
+              <li><a href="?page={{ feeds.next_page_number }}">&raquo;</a></li>
+            {% else %}
+              <li class="disabled"><span>&raquo;</span></li>
+            {% endif %}
+          </ul>
+        {% endif %}
+    </div>
+</div>
